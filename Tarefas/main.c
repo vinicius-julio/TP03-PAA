@@ -22,9 +22,10 @@ int main(int argc, char const *argv[]) {
   scanf("%s", nomeArq);
   char* texto;  
   LeituraArquivo(nomeArq, &texto); //le o arquivo de entrada.
+  getc(stdin);
   
   printf("Digite o padrão: ");
-  scanf("%s",padrao);  
+  scanf("%[^\n]250",padrao);  
   
   P = strlen(padrao); //Atribuindo tamanho do padrao.
   
